@@ -193,18 +193,23 @@ def webLogic():
 		backToThe(mainMenu)
 
 
-print("+-------------------------------------+")
-print("|  Welcome to Philosophy Class 101    |")
-print("+-------------------------------------+")
-print("\n   To continue please select y/n")
+def start():
+	print("+-------------------------------------+")
+	print("|  Welcome to Philosophy Class 101    |")
+	print("+-------------------------------------+")
+	print("\n   To continue please select y/n")
+	while True:
+		choose1 = input()
+		if choose1.lower() == "y":
+			mainMenu()
+		elif choose1.lower() == 'n':
+			print("Maybe next class")
+			break
+		else:
+			print("Please press y/n")
+def main():
+	start()
 
-while True:
-	choose1 = input()
-	if choose1.lower() == "y":
-		mainMenu()
-	elif choose1.lower() == 'n':
-		print("Maybe next class")
-		break
-	else:
-		print("Please press y/n")
+if __name__ == "__main__":
+	start()
 
